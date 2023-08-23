@@ -8,6 +8,11 @@
     font-size: 60px;
 }
 
+* {
+    text-decoration: none;
+    list-style: none;
+}
+
 body {
     margin: 0;
     width: 100%;
@@ -50,7 +55,6 @@ nav {
 
 .links {
     color: black;
-    text-decoration: none;
     font-size: 1.5rem;
     padding: 10px 20px;
     position: relative;
@@ -97,8 +101,9 @@ main {
 
 .jumbotron-img {
     background-image: url(/assets/images/jumbotron.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: -90px;
+    background-position: 0;
     width: 100%;
     height: 250px;
     display: grid;
@@ -134,7 +139,10 @@ main {
     align-items: center;
 }
 
-.form label { font-size: 20px; }
+.form label {
+    font-size: 20px; 
+    color: rgb(120, 206, 219);
+}
 
 .form input {
     width: 300px;
@@ -148,7 +156,20 @@ main {
     cursor: pointer;
 }
 
+.juegos {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+}
 
+.juego img {
+    width: 100%;
+}
+
+.dato-juego {text-align: center;}
 
 footer {
     background-color: #bdbdbd;
