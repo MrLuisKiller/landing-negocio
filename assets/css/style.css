@@ -1,36 +1,29 @@
 @font-face {
-    font-family: 'Grafiti';
+    font-family: 'Amazinc Grafiti';
     src: url(/assets/fonts/Amanzinc\ Grafiti.ttf);
 }
 
 .skimo {
-    font-family: Grafiti;
+    font-family: 'Amazinc Grafiti';
     font-size: 60px;
 }
 
 * {
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     list-style: none;
-}
-
-body {
-    margin: 0;
-    width: 100%;
+    box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
-    min-height: 100vh;
 }
 
 header {
-    padding: 10px;
+    width: 100%;
+    height: 100px;
     background-color: rgba(120, 206, 219, .7);
     display: flex;
     justify-content: center;
 }
-
-.header-container { width: 85%; }
 
 .header-section {
     display: grid;
@@ -47,6 +40,8 @@ header {
 
 .logo img { width: 60px; }
 
+#check, .checkbtn {display: none;}
+
 nav {
     display: flex;
     align-items: center;
@@ -55,7 +50,7 @@ nav {
 
 .links {
     color: black;
-    font-size: 1.5rem;
+    font-size: 20px;
     padding: 10px 20px;
     position: relative;
 }
@@ -173,10 +168,158 @@ main {
 
 footer {
     background-color: #bdbdbd;
+    height: 50px;
     color: #1a1a18;
-    margin: 2px;
+    margin: 2px;;
     text-align: center;
+    padding: 15px 0;
     font-size: 20px;
 }
 
+@media screen and (max-width: 660px) {
+    .header-section {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 10px;
+    }
 
+    .header-item {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    #check {
+        display: none;
+    }
+
+    .checkbtn {display: block;}
+
+    nav {
+        max-width: 600px;
+        position: fixed;
+        left: -150%;
+        top: 100px;
+        width: 100%;
+        background-color: rgba(120, 206, 219, .7);
+        transition: all .5s;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+        line-height: 20px;
+    }
+
+    #check:checked~nav {
+        left: 0;
+    }
+
+    .main-section {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 10px;
+    }
+
+    .main-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .jumbotron-img {
+        background-image: url(/assets/images/jumbotron.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0;
+        width: 100%;
+        height: 200px;
+        display: grid;
+        justify-content: center;
+    }
+
+    .titulo {
+        display: grid;
+        justify-content: center;
+    }
+
+    .titulo h1 {
+        margin: 0;
+        font-family: 'Amazinc Grafiti';
+        color: #eb1c23;
+        font-size: 60px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulo h2 {
+        margin: 0;
+        font-size: 30px;
+        ;
+        color: #0094b5;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .form form {
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form label {
+        font-size: 20px;
+        width: 100%;
+        color: rgb(120, 206, 219);
+    }
+
+    .form input {
+        width: 75%;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+
+    .form button {
+        font-size: 20px;
+        width: 20%;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #catalogo {
+        padding: 5px;
+    }
+
+    .juegos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .juego img {
+        width: 100%;
+    }
+
+    .dato-juego {
+        text-align: center;
+    }
+
+    footer {
+        background-color: #bdbdbd;
+        color: #1a1a18;
+        margin: 2px;
+        text-align: center;
+        font-size: 15px;
+        padding: 5px ;
+    }
+}
