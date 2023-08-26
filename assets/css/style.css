@@ -121,7 +121,7 @@ main {
 
 .titulo h2 {
     margin: 0;
-    font-size: 30px;;
+    font-size: 30px;
     color: #0094b5;
 }
 
@@ -160,11 +160,9 @@ main {
     gap: 16px;
 }
 
-.juego img {
-    width: 100%;
-}
+.juego img { width: 100%; }
 
-.dato-juego {text-align: center;}
+.dato-juego { text-align: center; }
 
 footer {
     background-color: #bdbdbd;
@@ -177,28 +175,7 @@ footer {
 }
 
 @media screen and (max-width: 660px) {
-    .header-section {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        gap: 10px;
-    }
-
-    .header-item {
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .logo img {
-        width: 60px;
-    }
-
-    #check {
-        display: none;
-    }
-
-    .checkbtn {display: block;}
+    .checkbtn { display: block; }
 
     nav {
         max-width: 600px;
@@ -217,109 +194,26 @@ footer {
         line-height: 20px;
     }
 
-    #check:checked~nav {
-        left: 0;
-    }
+    #check:checked~nav { left: 0; }
 
-    .main-section {
-        display: grid;
-        grid-template-rows: auto 1fr;
-        gap: 10px;
-    }
+    .main-section { grid-template-rows: auto 1fr; }
 
-    .main-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    .titulo h1 { font-size: 60px; }
 
-    .jumbotron-img {
-        background-image: url(/assets/images/jumbotron.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 0;
-        width: 100%;
-        height: 200px;
-        display: grid;
-        justify-content: center;
-    }
+    .form { width: 100%; }
 
-    .titulo {
-        display: grid;
-        justify-content: center;
-    }
+    .form label { width: 100%; }
 
-    .titulo h1 {
-        margin: 0;
-        font-family: 'Amazinc Grafiti';
-        color: #eb1c23;
-        font-size: 60px;
-        display: flex;
-        justify-content: center;
-    }
+    .form input { width: 75%; }
 
-    .titulo h2 {
-        margin: 0;
-        font-size: 30px;
-        ;
-        color: #0094b5;
-    }
+    .form button { width: 20%; }
 
-    .form {
-        width: 100%;
-    }
+    #catalogo { padding: 5px; }
 
-    .form form {
-        height: 100%;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .form label {
-        font-size: 20px;
-        width: 100%;
-        color: rgb(120, 206, 219);
-    }
-
-    .form input {
-        width: 75%;
-        font-size: 20px;
-        border-radius: 5px;
-    }
-
-    .form button {
-        font-size: 20px;
-        width: 20%;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    #catalogo {
-        padding: 5px;
-    }
-
-    .juegos {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
-    }
-
-    .juego img {
-        width: 100%;
-    }
-
-    .dato-juego {
-        text-align: center;
-    }
+    .juegos { gap: 10px; }
 
     footer {
-        background-color: #bdbdbd;
-        color: #1a1a18;
-        margin: 2px;
-        text-align: center;
         font-size: 15px;
-        padding: 5px ;
+        padding: 5px;
     }
 }
